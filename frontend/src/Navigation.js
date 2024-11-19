@@ -5,7 +5,9 @@ import Homepage from "../src/page/Home";
 import { OffersScreen } from "../src/page/Account";
 import { VisitedPlacesScreen } from "../src/page/WishlistScreen";
 import { PlanningScreen } from "../src/page/MessengerScreen";
-import Login from "../src/auth/login/LoginScreen";
+// import Articles from './Articles'; // Import the Articles component
+// import Chatbot from './Chatbot'; // Import the Chatbot component
+
 
 const Tab = createBottomTabNavigator();
 
@@ -37,16 +39,32 @@ export const AppNavigator = () => {
           ),
         }}
       />
-      {/* Updated name from "login" to "Login" */}
-      <Tab.Screen
-        name="Login"
-        component={Login}
+       <Tab.Screen
+        name="Articles"
+        component={Homepage}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Feather name="log-in" size={size} color={color} />
+            <Feather name="book" size={size} color={color} />
           ),
         }}
       />
+      <Tab.Screen
+        name="Chatbot"
+        component={Homepage}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="message-circle" size={size} color={color} />
+          ),
+        }}
+      />
+      {/* Updated name from "login" to "Login" */}
+      {/* <Tab.Screen
+        name="Login"
+        component={Login}
+        options={{
+          // tabBarIcon: () => null, 
+        }}
+      /> */}
       <Tab.Screen
         name="Offers"
         component={OffersScreen}

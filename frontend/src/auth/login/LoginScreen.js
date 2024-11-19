@@ -79,7 +79,7 @@ const LoginScreen = ({ navigation }) => {
   
       // Redirect to Home after showing the toast
       setTimeout(() => {
-        navigation.navigate('Home');
+        navigation.replace('Home');
       }, 1500); // Adjust delay to match toast duration
     }
   };
